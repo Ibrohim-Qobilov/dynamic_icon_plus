@@ -14,6 +14,14 @@
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/screenshots/demo.gif" width="360" alt="Dynamic App Icon Switching Live Demo" />
+  <br />
+  <em>Live Demo: Runtime app icon transition (Default Blue &rarr; Gold VIP &rarr; Midnight Dark)</em>
+</p>
+
+---
+
 A modern, high-performance Flutter plugin that enables mobile applications to **change their launcher app icon dynamically at runtime** on **Android** and **iOS** without restarting the application or causing crashes.
 
 Ideal for **VIP / Premium subscriptions, dark mode matching, holiday / seasonal events, gamification tiers, and brand customization** (like Telegram, Duolingo, and Revolut).
