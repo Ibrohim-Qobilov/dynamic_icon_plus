@@ -14,20 +14,11 @@
 
 ---
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/android.gif" alt="Android Dynamic Icon Switcher Demo" width="300" />
-      <br />
-      <strong>🤖 Android Live Demo</strong>
-    </td>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/ios.gif" alt="iOS Dynamic Icon Switcher Demo" width="300" />
-      <br />
-      <strong>🍎 iOS Live Demo</strong>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/demo.gif" width="760" alt="DynamicIconPlus Android and iOS Synchronized Demo" />
+  <br />
+  <em>⚡ Live Synchronization: Android (Pixel) & iOS (iPhone 16 Pro) with Official App Ecosystem</em>
+</p>
 
 ---
 
