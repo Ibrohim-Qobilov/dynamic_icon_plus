@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:dynamic_icon_plus/dynamic_icon_plus.dart';
 
 void main() {
@@ -40,33 +41,34 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
   bool _isSupported = false;
   String? _currentIcon;
   bool _isLoading = false;
+  bool _autoExitToHome = true;
 
   final List<IconThemeOption> _iconThemes = [
     IconThemeOption(
       id: null,
       name: 'Default Classic',
-      description: 'Standard brand icon (Sapphire Blue)',
+      description: 'Asosiy standart brend ikonkasi (Moviy)',
       color: Color(0xFF0284C7),
       iconData: Icons.shield_rounded,
     ),
     IconThemeOption(
       id: 'dark_icon',
       name: 'Midnight Dark',
-      description: 'Deep obsidian and violet for night mode',
+      description: 'Tungi rejim uchun qora va binafsharang',
       color: Color(0xFF8B5CF6),
       iconData: Icons.dark_mode_rounded,
     ),
     IconThemeOption(
       id: 'gold_icon',
       name: 'Gold VIP Luxury',
-      description: 'Premium gold accent for VIP subscribers',
+      description: 'VIP obunachilar uchun oltin tojli ikonka',
       color: Color(0xFFF59E0B),
       iconData: Icons.workspace_premium_rounded,
     ),
     IconThemeOption(
       id: 'neon_icon',
       name: 'Neon Emerald',
-      description: 'Vibrant futuristic glowing neon theme',
+      description: 'Yorqin zamonaviy yashil neon ikonka',
       color: Color(0xFF10B981),
       iconData: Icons.bolt_rounded,
     ),
@@ -112,19 +114,26 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
           SnackBar(
             content: Text(
               iconName == null
-                  ? 'App icon restored to Default!'
-                  : 'App icon switched to "$iconName"!',
+                  ? 'Ikonka asl holiga (Default) qaytarildi!'
+                  : 'Ikonka muvaffaqiyatli "$iconName" ga o\'zgartirildi!',
             ),
             behavior: SnackBarBehavior.floating,
             backgroundColor: const Color(0xFF10B981),
+            duration: const Duration(seconds: 2),
           ),
         );
+      }
+
+      // Agar bosh ekranga chiqish yoqilgan bo'lsa, foydalanuvchiga ikonkani ko'rsatish uchun minimizatsiya qiladi
+      if (_autoExitToHome) {
+        await Future.delayed(const Duration(milliseconds: 600));
+        await SystemNavigator.pop();
       }
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Failed to switch icon: $e'),
+            content: Text('Xatolik: $e'),
             behavior: SnackBarBehavior.floating,
             backgroundColor: const Color(0xFFEF4444),
           ),
@@ -145,7 +154,7 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: _loadIconStatus,
-            tooltip: 'Refresh status',
+            tooltip: 'Yangilash',
           ),
         ],
       ),
@@ -177,8 +186,8 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
                             const SizedBox(width: 8),
                             Text(
                               _isSupported
-                                  ? 'Dynamic Icons Supported'
-                                  : 'Alternate Icons Not Supported',
+                                  ? 'Dinamik Ikonkalar Qo\'llab-quvvatlanadi'
+                                  : 'Bu qurilmada ruxsat berilmagan',
                               style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -187,7 +196,7 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text('Active Icon:'),
+                            const Text('Hozirgi Aktiv Ikonka:'),
                             Chip(
                               label: Text(
                                 _currentIcon ?? 'Default Classic',
@@ -201,10 +210,28 @@ class _IconSwitcherScreenState extends State<IconSwitcherScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 16),
+
+                // Switch: Auto-exit to Home Screen
+                SwitchListTile(
+                  title: const Text(
+                    'Ikonka tanlanganda Bosh ekranga chiqish',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                  subtitle: const Text(
+                    'Tanlangan ikonkani darhol telefon ekranida ko\'rish uchun appdan chiqadi',
+                  ),
+                  value: _autoExitToHome,
+                  onChanged: (val) => setState(() => _autoExitToHome = val),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: BorderSide(color: Colors.grey.withValues(alpha: 0.2)),
+                  ),
+                ),
+                const SizedBox(height: 20),
 
                 const Text(
-                  'Choose App Launcher Icon:',
+                  'Ilova Belgisini Tanlang:',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12),
