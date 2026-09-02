@@ -14,11 +14,20 @@
 
 ---
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/screenshots/demo.gif" width="360" alt="Dynamic App Icon Switching Live Demo" />
-  <br />
-  <em>Live Demo: Runtime app icon transition (Default Blue &rarr; Gold VIP &rarr; Midnight Dark)</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/android.gif" alt="Android Dynamic Icon Switcher Demo" width="300" />
+      <br />
+      <strong>🤖 Android Live Demo</strong>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/ios.gif" alt="iOS Dynamic Icon Switcher Demo" width="300" />
+      <br />
+      <strong>🍎 iOS Live Demo</strong>
+    </td>
+  </tr>
+</table>
 
 ---
 
