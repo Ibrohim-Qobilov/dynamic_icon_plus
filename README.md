@@ -14,11 +14,20 @@
 
 ---
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/demo.gif" width="760" alt="DynamicIconPlus Android and iOS Synchronized Demo" />
-  <br />
-  <em>⚡ Live Synchronization: Android (Pixel) & iOS (iPhone 16 Pro) with Official App Ecosystem</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/android.gif" alt="Android Demo" width="340" />
+      <br />
+      <strong>🤖 Android</strong>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Ibrohim-Qobilov/dynamic_icon_plus/main/assets/images/ios.gif" alt="iOS Demo" width="340" />
+      <br />
+      <strong>🍎 iOS</strong>
+    </td>
+  </tr>
+</table>
 
 ---
 
