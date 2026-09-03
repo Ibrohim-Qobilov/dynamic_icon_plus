@@ -64,6 +64,33 @@ flutter pub add dynamic_icon_plus
 
 ---
 
+## ⚡ Automatic Icon Generator (Zero Manual Work! 🚀)
+
+No need to manually resize icons or edit `AndroidManifest.xml` / `Info.plist` by hand!
+
+1. Place your PNG icons inside `assets/icons/`:
+```text
+my_flutter_app/
+└── assets/
+    └── icons/
+        ├── dark_icon.png
+        ├── gold_icon.png
+        └── neon_icon.png
+```
+
+2. Run the built-in generator command:
+```bash
+dart run dynamic_icon_plus:generate
+```
+
+This single command automatically:
+* 🤖 **Generates all Android mipmap assets** (`mdpi`, `hdpi`, `xhdpi`, `xxhdpi`, `xxxhdpi`) into `android/app/src/main/res/`
+* 🍎 **Generates all iOS icon assets** (`@2x`, `@3x`, `1024`) into `ios/Runner/`
+* 📝 **Auto-configures `AndroidManifest.xml`** by adding required `<activity-alias>` tags
+* 📝 **Auto-configures `Info.plist`** by adding `CFBundleAlternateIcons`
+
+---
+
 ## 🚀 Quick Start
 
 ```dart

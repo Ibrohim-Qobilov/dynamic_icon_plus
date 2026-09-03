@@ -66,6 +66,18 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            <!-- Alternate Icon: default_icon -->
+        <activity-alias
+            android:name=".MainActivity.default_icon"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_default_icon"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
     </application>
 
     <queries>

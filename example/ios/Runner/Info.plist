@@ -75,6 +75,15 @@
 		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
+			<key>default_icon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>default_icon</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
 			<key>dark_icon</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
