@@ -2,6 +2,11 @@
 
 All notable changes to the `dynamic_icon_plus` plugin will be documented in this file.
 
+## 0.1.1
+
+* Add built-in CLI generator (`dart run dynamic_icon_plus:generate`).
+* Add Uzbek documentation (`README_UZ.md`), working badge links, and expandable quick guide.
+
 ## [0.1.0] - 2026-09-02
 
 ### Added

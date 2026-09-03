@@ -3,9 +3,48 @@
 </p>
 
 <p align="center">
-  <a href="README_UZ.md">🇺🇿 <b>O'zbekcha Hujjatlar</b></a> &nbsp;•&nbsp;
-  <a href="README.md">🇬🇧 <b>English Documentation</b></a>
+  <a href="https://github.com/Ibrohim-Qobilov/dynamic_icon_plus/blob/main/README_UZ.md">
+    <img src="https://img.shields.io/badge/🇺🇿_O'zbekcha-Hujjatlar_va_Qo'llanma-0284C7?style=for-the-badge&logo=readme&logoColor=white" alt="O'zbekcha Hujjatlar" />
+  </a>
+  <a href="https://github.com/Ibrohim-Qobilov/dynamic_icon_plus/blob/main/README.md">
+    <img src="https://img.shields.io/badge/🇬🇧_English-Documentation-6366F1?style=for-the-badge" alt="English Documentation" />
+  </a>
 </p>
+
+<details>
+<summary>🇺🇿 <b>O'zbek tilidagi to'liq qo'llanmani shu yerda o'qish (Bosing / Click to Expand)</b></summary>
+<br />
+
+### 🎭 DynamicIconPlus — O'zbekcha Tezkor Qo'llanma
+
+Flutter ilovalarida dastur ishlayotgan vaqtda (runtime) ilovani qayta ishga tushirmasdan yoki qotib qolmasdan **telefon Bosh ekranidagi ilova belgisini (app launcher icon) dinamik almashtirish** uchun plagin.
+
+#### ⚡ Avtomatik Ikonka Generatori (1 soniyada tayyorlash):
+Qo'lda rasm qirqish yoki `AndroidManifest.xml` / `Info.plist` ni tahrirlash shart emas!
+1. PNG rasmlaringizni `assets/icons/` papkasiga tashlang (`dark_icon.png`, `gold_icon.png`, `neon_icon.png`).
+2. Terminalda buyruq bering:
+```bash
+dart run dynamic_icon_plus:generate
+```
+
+#### 🚀 Flutter Kodingizda Ishlatish:
+```dart
+import 'package:dynamic_icon_plus/dynamic_icon_plus.dart';
+
+// 1. Yangi ikonkaga o'tkazish
+await DynamicIconPlus.setIcon('gold_icon');
+
+// 2. Asl holiga (Default) qaytarish
+await DynamicIconPlus.reset();
+
+// 3. Hozirgi ikonkani bilish
+String? current = await DynamicIconPlus.currentIcon;
+```
+
+Batafsil to'liq hujjat: 👉 [README_UZ.md](https://github.com/Ibrohim-Qobilov/dynamic_icon_plus/blob/main/README_UZ.md)
+
+---
+</details>
 
 # 🎭 DynamicIconPlus — Dynamic App Launcher Icon Switching for Flutter
 

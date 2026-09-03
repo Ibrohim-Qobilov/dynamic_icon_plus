@@ -1,6 +1,6 @@
 name: dynamic_icon_plus
 description: Modern Flutter plugin for dynamically changing app launcher icons at runtime on Android and iOS without restarting the application.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/Ibrohim-Qobilov/dynamic_icon_plus
 repository: https://github.com/Ibrohim-Qobilov/dynamic_icon_plus
 issue_tracker: https://github.com/Ibrohim-Qobilov/dynamic_icon_plus/issues
